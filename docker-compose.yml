@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  task1:
+    build: .
+    image: crypto-task1
+    container_name: task1_container
+    stdin_open: true
+    tty: true
+    command: ./task1
+
+  task2:
+    build: .
+    image: crypto-task2
+    container_name: task2_container
+    stdin_open: true
+    tty: true
+    command: ./task2
+    volumes:
+      - ./key.txt:/app/key.txt
