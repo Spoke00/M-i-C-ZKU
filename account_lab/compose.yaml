@@ -1,0 +1,11 @@
+services:
+  account-lab:
+    build: .
+    image: account-lab:local
+    stdin_open: true
+    tty: true
+    working_dir: /data
+    volumes:
+      - type: bind
+        source: .
+        target: /data
